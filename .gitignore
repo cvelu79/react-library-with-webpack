@@ -1,0 +1,23 @@
+# Build folder
+build
+
+# Coverage directory
+coverage
+
+# Dependency directory
+node_modules
+
+# Mac files
+.DS_Store
+
+.vscode
+.scannerwork
+.npmrc
+package-lock.json
+eslint-sonar.json
+
+#log files
+debug.log
+
+#snapshot files
+#**/__snapshots__
