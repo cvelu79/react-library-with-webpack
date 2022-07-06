@@ -1,6 +1,15 @@
 const path = require("path");
+const webpack = require('webpack');
 const pkg = require("./package.json");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+const PRODUCTION = 'production';
+
+process.env.NODE_ENV = PRODUCTION;
+
 module.exports = {
+    mode: "production",
     entry: "./src/index.js",
     output: {
         path: path.resolve(__dirname, "dist"),
@@ -9,14 +18,15 @@ module.exports = {
         libraryTarget: "commonjs2"
     },
     resolve: {
-        modules: ['node_modules', path.resolve(__dirname, "src")],
-        extensions: ['.js', '.jsx', '.json'],
+        modules: ["node_modules", path.resolve(__dirname, "src")],
+        extensions: [".js", ".jsx", ".json"],
         enforceExtension: false
     },
     module: {
         rules: [
             {
                 test: /\.(js|jsx)$/,
+                include: path.resolve(__dirname, "src"),
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader"
@@ -42,6 +52,15 @@ module.exports = {
     //         react: path.resolve("./node_modules/react")
     //     }
     // },
+    plugins: [
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify(PRODUCTION)
+          }),
+        new CleanWebpackPlugin(),
+        new MiniCssExtractPlugin({
+            filename: "css/my-react-library.min.css"
+        })
+    ],
     externals: {
         react: {
             root: "React",
