@@ -8,6 +8,14 @@ module.exports = {
         library: pkg.name,
         libraryTarget: "commonjs2"
     },
+    resolve: {
+        modules: ['node_modules', path.resolve(__dirname, "src")],
+        extensions: ['.js', '.jsx', '.json'],
+        alias: {
+            react: path.resolve("./node_modules/react")
+        },
+        enforceExtension: false
+    },
     module: {
         rules: [
             {
@@ -32,11 +40,11 @@ module.exports = {
             }
         ]
     },
-    resolve: {
-        alias: {
-            react: path.resolve("./node_modules/react")
-        }
-    },
+    // resolve: {
+    //     alias: {
+    //         react: path.resolve("./node_modules/react")
+    //     }
+    // },
     externals: {
         react: {
             root: "React",
