@@ -13,7 +13,7 @@ module.exports = {
     entry: "./src/index.js",
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "[name].bundle.[chunkhash].js",
+        filename: "index.js",
         library: pkg.name,
         libraryTarget: "commonjs2"
     },
