@@ -11,9 +11,6 @@ module.exports = {
     resolve: {
         modules: ['node_modules', path.resolve(__dirname, "src")],
         extensions: ['.js', '.jsx', '.json'],
-        alias: {
-            react: path.resolve("./node_modules/react")
-        },
         enforceExtension: false
     },
     module: {
