@@ -1,3 +1,3 @@
 import "../src/components/component.css"
 
-export { Button } from "../src/"
+export { Button } from "../src/components"
