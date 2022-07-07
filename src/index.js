@@ -1,3 +1,10 @@
-import "../src/components/component.css"
+// import "../src/components/component.css"
 
-export { Button } from "../src/components"
+// export { Button } from "../src/components"
+
+import React from "react";
+import ReactDOM from "react-dom";
+
+import App from "./components/App";
+
+ReactDOM.render(<App />, document.getElementById("root"));
