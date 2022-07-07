@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-import './Button.css';
-import logo from '../../assets/images/logo.png';
+import "./Button.css";
+import logo from "../../assets/images/logo.png";
 
 class Button extends Component {
   constructor(props) {
@@ -11,19 +11,21 @@ class Button extends Component {
 
   handleOnClick = (e) => {
     this.props.onClick();
-  }
+  };
 
   render() {
     return (
       <div>
-        <button onClick={this.handleOnClick}><img alt="logo" className="img" src={logo} /></button>
+        <button onClick={this.handleOnClick}>
+          <img alt="logo" className="img" src={logo} />
+        </button>
       </div>
     );
   }
 }
 
 Button.propTypes = {
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
 };
 
 export default Button;

@@ -25,8 +25,5 @@ module.exports = {
 		],
 	},
 
-	plugins: [
-		new webpack.ProgressPlugin(),
-		new CleanWebpackPlugin()
-	],
+	plugins: [new webpack.ProgressPlugin(), new CleanWebpackPlugin()],
 };

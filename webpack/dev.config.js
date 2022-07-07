@@ -28,9 +28,9 @@ module.exports = merge(baseConfig, {
 	module: {
 		rules: [
 			{
-                test: /\.css$/i,
-                use: ["style-loader", "css-loader"]
-            },
+				test: /\.css$/i,
+				use: ['style-loader', 'css-loader'],
+			},
 			{
 				test: /\.(png|jpe?g|gif)$/i,
 				loader: 'file-loader',
@@ -41,7 +41,7 @@ module.exports = merge(baseConfig, {
 			{
 				test: /\.svg$/,
 				use: ['@svgr/webpack'],
-			}
+			},
 		],
 	},
 
