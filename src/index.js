@@ -1,7 +1,3 @@
-// import "../src/components/component.css"
-
-// export { Button } from "../src/components"
-
 import React from "react";
 import ReactDOM from "react-dom";
 
