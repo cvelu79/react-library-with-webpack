@@ -5,18 +5,14 @@ import './Button.css';
 import logo from '../../assets/images/logo.png';
 
 class Button extends Component {
-	constructor(props) {
-		super(props);
-	}
-
-	handleOnClick = e => {
+	handleOnClick = () => {
 		this.props.onClick();
 	};
 
 	render() {
 		return (
 			<div>
-				<button onClick={this.handleOnClick}>
+				<button type="button" onClick={this.handleOnClick}>
 					<img alt="logo" className="img" src={logo} />
 				</button>
 			</div>
