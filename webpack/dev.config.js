@@ -5,8 +5,6 @@
 const path = require('path');
 const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const autoprefixer = require('autoprefixer');
-const postCssPresetEnv = require('postcss-preset-env');
 const baseConfig = require('./base.config');
 
 const sourcePath = path.resolve(__dirname, '../', 'src');
@@ -30,42 +28,9 @@ module.exports = merge(baseConfig, {
 	module: {
 		rules: [
 			{
-				test: /\.(sa|sc|c)ss$/,
-				use: [
-					{
-						loader: 'style-loader',
-						options: {
-							injectType: 'styleTag',
-						},
-					},
-					{
-						loader: 'css-loader',
-						options: {
-							url: false,
-							sourceMap: true,
-						},
-					},
-					{
-						loader: 'postcss-loader',
-						options: {
-							postcssOptions: {
-								plugins: [
-									postCssPresetEnv(),
-									autoprefixer({
-										cascade: false,
-									}),
-								],
-							},
-						},
-					},
-					{
-						loader: 'sass-loader',
-						options: {
-							sourceMap: true,
-						},
-					},
-				],
-			},
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"]
+            },
 			{
 				test: /\.(png|jpe?g|gif)$/i,
 				loader: 'file-loader',
