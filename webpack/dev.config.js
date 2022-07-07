@@ -4,6 +4,7 @@
 
 const path = require('path');
 const { merge } = require('webpack-merge');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const postCssPresetEnv = require('postcss-preset-env');
 const baseConfig = require('./base.config');
