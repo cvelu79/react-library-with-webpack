@@ -1,0 +1,81 @@
+options:
+    formatter: table
+    max-warnings: 20
+
+rules:
+    no-vendor-prefixes:
+        - 0
+        - ignore-non-standard: true
+
+    indentation:
+        - 0
+        -
+
+    leading-zero:
+        - 0
+        -
+
+    nesting-depth:
+        - 1
+        - max-depth: 4
+
+    placeholder-in-extend:
+        - 0
+        -
+
+    pseudo-element:
+        - 0
+        -
+
+    variable-name-format:
+        - 0
+        -
+
+files:
+    include: 'src/assets/sass/**/*.s+(a|c)ss'
+
+severity: error
+
+linters:
+    BorderZero:
+        enabled: true
+        convention: zero
+
+    BemDepth:
+        enabled: true
+
+    DeclarationOrder:
+        enabled: false
+
+    ExtendDirective:
+        enabled: true
+
+    LeadingZero:
+        enabled: false
+
+    NameFormat:
+        enabled: true
+
+    PrivateNamingConvention:
+        enabled: true
+        prefix: _
+
+    PropertySortOrder:
+        enabled: false
+
+    QualifyingElement:
+        enabled: false
+
+    SelectorFormat:
+        enabled: true
+        convention: strictBEM
+        class_convention: ^(?!js-).*
+        class_convention_explanation: should not be written in the form js-*
+
+    SingleLinePerProperty:
+        enabled: true
+        allow_single_line_rule_sets: false
+
+    StringQuotes:
+        enabled: true
+        style: double_quotes
