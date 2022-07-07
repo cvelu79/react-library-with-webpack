@@ -69,12 +69,12 @@ module.exports = {
             "process.env.NODE_ENV": JSON.stringify(PRODUCTION)
         }),
         new CleanWebpackPlugin(),
-        // new HtmlWebpackPlugin({
-        //     filename: "index.html",
-        //     inject: "body",
-        //     hash: false,
-        //     template: `${sourcePath}/index.html`
-        // }),
+        new HtmlWebpackPlugin({
+            filename: "index.html",
+            inject: "body",
+            hash: false,
+            template: `${sourcePath}/index.html`
+        }),
         new MiniCssExtractPlugin({
             filename: "my-react-library.min.css"
         })
