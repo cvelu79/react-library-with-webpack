@@ -6,7 +6,7 @@ describe('Test case for testing TextInput component', () => {
 	let wrapper;
 
 	beforeEach(() => {
-		wrapper = mount(<TextInput />, {});
+		wrapper = mount(<TextInput id="input" onChange={() => {}} />, {});
 	});
 
 	it('renders TextInput component', () => {

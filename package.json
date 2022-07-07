@@ -11,7 +11,12 @@
 		"coverage": "jest --config ./test/jest.config.js --coverage --colors",
 		"lint": "eslint ./src",
 		"lint:fix": "eslint --fix ./src",
-		"sass-lint": "sass-lint -vq src/**/*.scss"
+		"sass-lint": "sass-lint -vq src/**/*.scss",
+		"lint-sonar": "eslint ./src -f json -o eslint-sonar.json",
+		"sonar": "sonar-scanner.bat",
+		"quality-check": "npm run lint && npm run sass-lint && npm run test && npm run coverage && npm run lint-sonar",
+		"sonar-check": "npm run quality-check && npm run sonar",
+		"prettier-format": "prettier --config .prettierrc src/**/*.js --write"
 	},
 	"repository": {
 		"type": "git",
