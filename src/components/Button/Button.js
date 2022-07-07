@@ -16,7 +16,7 @@ class Button extends Component {
   render() {
     return (
       <div>
-        <button onclick={this.handleOnClick}><img alt="logo" className="img" src={logo} /></button>
+        <button onClick={this.handleOnClick}><img alt="logo" className="img" src={logo} /></button>
       </div>
     );
   }
