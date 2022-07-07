@@ -7,7 +7,8 @@
         "start": "webpack-dev-server --config ./webpack/dev.config.js",
         "build": "webpack --config ./webpack/prod.config.js --watch",
         "test": "jest --config ./test/jest.config.js --verbose",
-        "test:watch": "jest --config ./test/jest.config.js --verbose --watchAll"
+        "test:watch": "jest --config ./test/jest.config.js --verbose --watchAll",
+        "coverage": "jest --config ./test/jest.config.js --coverage --colors"
     },
     "repository": {
         "type": "git",
