@@ -12,6 +12,7 @@ node_modules
 
 .vscode
 .scannerwork
+.storybook
 .npmrc
 package-lock.json
 eslint-sonar.json

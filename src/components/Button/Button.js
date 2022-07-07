@@ -10,10 +10,13 @@ class Button extends Component {
 	};
 
 	render() {
+		const classes = `${this.props.className ? `button ${this.props.className}` : 'button'}`;
+
 		return (
 			<div>
-				<button type="button" onClick={this.handleOnClick}>
-					<img alt="logo" className="img" src={logo} />
+				<button type="button" className={classes} onClick={this.handleOnClick}>
+					<img src={logo} className="icon" alt="icon" />
+					{this.props.label && this.props.label}
 				</button>
 			</div>
 		);
@@ -22,6 +25,13 @@ class Button extends Component {
 
 Button.propTypes = {
 	onClick: PropTypes.func.isRequired,
+	label: PropTypes.string,
+	className: PropTypes.string,
+};
+
+Button.defaultProps = {
+	label: '',
+	className: 'button',
 };
 
 export default Button;

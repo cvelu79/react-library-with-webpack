@@ -1,0 +1,23 @@
+.tabs-component .tabs-row {
+	font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	display: flex;
+}
+
+.tabs-component .tabs-row .tab {
+	border: 1px solid #eeeeee;
+	border-bottom: none;
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+}
+
+.tabs-component .tabs-row .tab.active {
+	background-color: #eeeeee;
+	cursor: auto;
+}
+
+.tabs-component .tabs-content {
+	border: 1px solid #eeeeee;
+	padding: 0.5rem 1rem;
+}

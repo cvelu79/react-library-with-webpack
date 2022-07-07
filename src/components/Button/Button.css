@@ -1,4 +1,21 @@
-.img {
-	width: 25px;
-	height: 25px;
+.button {
+	display: inline-flex;
+	align-items: center;
+	border: none;
+	background-color: transparent;
+	padding: 15px;
+}
+
+.icon {
+	width: 15px;
+	height: 15px;
+	margin-right: 10px;
+}
+
+.primary-button {
+	border: 1px solid purple;
+	color: #ffffff;
+	background-color: purple;
+	font-size: 16px;
+	font-weight: bold;
 }
