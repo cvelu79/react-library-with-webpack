@@ -16,7 +16,7 @@ class Button extends Component {
 			<div>
 				<button type="button" className={classes} onClick={this.handleOnClick}>
 					<img src={logo} className="icon" alt="icon" />
-					{this.props.label && this.props.label}
+					{this.props.label.lenght !== 0 && this.props.label}
 				</button>
 			</div>
 		);

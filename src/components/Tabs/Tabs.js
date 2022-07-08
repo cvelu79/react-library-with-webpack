@@ -14,10 +14,13 @@ const Tabs = ({ children }) => {
 		<div className="tabs-component">
 			<div className="tabs-row">
 				{children.map((child, index) => (
+					// eslint-disable-next-line jsx-a11y/interactive-supports-focus
 					<div
+						role="tab"
 						key={child.props.label}
 						className={`tab ${index === active ? 'active' : ''}`}
 						onClick={onTabClick(index)}
+						onKeyDown={onTabClick(index)}
 					>
 						{child.props.label}
 					</div>

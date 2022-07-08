@@ -3,3 +3,4 @@
 /src/assets/vendor/**
 /coverage/**
 /.scannerwork/**
+/src/stories/**
