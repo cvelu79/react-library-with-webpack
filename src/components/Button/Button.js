@@ -31,7 +31,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
 	label: '',
-	className: 'button',
+	className: '',
 };
 
 export default Button;
